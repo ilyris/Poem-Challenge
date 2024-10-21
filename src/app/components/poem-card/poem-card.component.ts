@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { SharedPoemState } from '../../services/sharedPoemService/shared-poem-state.service';
-
-interface Poem {
-  title: string;
-  author: string;
-  lines: string[];
-  linecount: string;
-}
+import { Poem } from '../../../typings/poem/poemTypes';
 
 @Component({
   selector: 'app-poem-card',
@@ -24,7 +18,7 @@ export class PoemCardComponent {
     if (poem) {
       return poem;
     } else {
-      console.warn('No poem data available.');
+      console.log('No poem data available.');
       return null;
     }
   }
