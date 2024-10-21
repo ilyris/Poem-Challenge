@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, switchMap, tap } from 'rxjs/operators';
-import { Authors } from '../../../typings/poem/poemTypes';
+import { Authors } from '../../../typings/poem';
 
 @Injectable({
   providedIn: 'root',

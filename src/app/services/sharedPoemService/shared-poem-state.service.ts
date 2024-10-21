@@ -1,6 +1,6 @@
 // shared-state.service.ts
 import { Injectable, signal, WritableSignal } from '@angular/core';
-import { Poem } from '../../../typings/poem/poemTypes';
+import { Poem } from '../../../typings/poem';
 
 @Injectable({
   providedIn: 'root',
