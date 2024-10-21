@@ -1,0 +1,36 @@
+<mat-card class="form-container">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Author</mat-label>
+        <mat-select [formControl]="selectedAuthorName" required>
+          @for (author of authors; track author) {
+            <mat-option [value]="author">{{ author }}</mat-option>
+          }
+        </mat-select>
+        @if(!selectedAuthor) {
+          <mat-error>
+            Author is required.
+          </mat-error>
+        }
+      </mat-form-field>
+      @if(selectedAuthor) {
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Title</mat-label>
+          <mat-select [formControl]="titleFormControl" required>
+          @for (title of authorTitles; track title) {
+            <mat-option [value]="title.title">{{ title.title }}</mat-option>
+          }
+        </mat-select>
+          @if(!selectedTitle) {
+            <mat-error>
+              Title is required.
+            </mat-error>
+          }
+        </mat-form-field>
+      }
+
+
+      <button mat-flat-button color="#000" type="button" [disabled]="!selectedTitle || !selectedAuthor" (click)="onClick()">
+        Get Poem
+      </button> 
+</mat-card> 
+

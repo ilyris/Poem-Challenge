@@ -1,0 +1,26 @@
+$form-margin: 50px;
+$form-padding: 20px;
+$form-width: 400px;
+
+.form-container {
+  width: $form-width;
+  margin: $form-margin auto;
+  padding: $form-padding;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+
+  .form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+  .mat-mdc-unelevated-button[disabled], .mat-mdc-unelevated-button.mat-mdc-button-disabled {
+    background-color: gray;
+  }
+}

@@ -1,0 +1,16 @@
+<mat-card class="poem-card">
+    @let poem = getSearchedPoemData();
+    @if (poem) {
+      <mat-card-header>
+        <mat-card-title>{{ poem.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>{{ poem.lines.join() }}</mat-card-content>
+      <mat-card-footer>Linecount {{poem.linecount}}</mat-card-footer>
+    } @else {
+      <mat-card-header>
+        <mat-card-title>Poem Not Found</mat-card-title>
+      </mat-card-header>
+    }
+  </mat-card>
+  
+  
